@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+/* My-App */
+.top {
+    background-color: black;
+    padding: 4% 0;
+}
+
+section .app {
+    display: grid;
+    width: 50%;
+    margin: auto;
+    column-gap: 0.1rem;
+}
+
+.app img {
+    border: 0.6rem white solid;
+    border-radius: 6%;
+    width: 20rem;
+    order: -1;
+    grid-column: 1;
+    grid-row: 1/4;
+    margin: auto 0.2rem;
+}
+
+.app.h1, p, button {
+    grid-column: 2;
+}
+
+.app h1 {
+    font-size: 5rem;
+    font-weight: lighter;
+}
+
+.app p {
+    font-size: small;
+    line-height: 1.4rem;
+    margin: auto 0.5rem;
+}
+
+.app button {
+    background-color: rgb(243, 26, 128);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0.6rem;
+    margin: 1rem auto;
+    width: 33%;
+}
+
+.app button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* My-List */
+.bottom {
+    background-color: #550055;
+}
+
+.bottom h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 2.5rem auto;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.app-list img {   
+    width: 6rem;
+    border-radius: 50%;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+    list-style: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image {
+    background-color: aliceblue;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-content {
+    background-color: #361330;
+    line-height: 1rem;
+    padding: 1rem;
+}
+
+.card-content p {
+    text-align: left;
+    margin: 0.9rem 0 0.2rem 1.rem;   
+    font-size: 0.8rem;
+}
+
+.card-content .person-title {
+    font-weight: 800;
+}
+
+.card-content .person-date {
+    text-align: right;
+    margin-right: 2rem;
+}
+
+.bottom button {
+    background-color: aliceblue;
+    color: black;
+    width: 16%;
+    padding: 1rem 2rem;
+    margin: 2rem auto;
+    border: none;
+    border-radius: 0.7rem;
+    font-weight: 700;
+}
+
+.bottom button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media only screen and (max-width:262px) {
+    /* My-App */
+    section .app {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+        margin: auto;
+    }
+
+    .app img {
+        border: 0.75rem white solid;
+        border-radius: 7%;
+        width: 100%;
+    }
+
+    .app h1 {
+        font-size: 2.5rem;
+        font-weight: lighter;
+        order: -1;        
+        margin-bottom: 1rem;
+    }
+
+    .app p {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .app button {
+        border-radius: 0.6rem;
+        width: 60%;
+        padding: 1rem 1rem;
+        font-size: 0.9rem;
+    }    
+
+    /* My-List */
+    .app-list {
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        margin: auto;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        list-style: none;
+    }
+
+    .card-image {
+        padding: 0.4rem;
+    }
+
+    .app-list img {   
+        width: 4rem;
+    }
+
+    .card-content {
+        background-color: #361330;
+        line-height: 1.1rem;
+        padding: 0.1rem;
+    }
+
+    .card-content p {
+        text-align: left;
+        margin: 0.5rem 0.3rem 0rem 0.8rem;   
+        font-size: 0.9rem;
+    }
+
+    .card-content .person-title {
+        font-weight: 900;
+        margin-top: 0.7rem;
+    }
+
+    .card-content .person-date {
+        text-align: right;
+        margin-right: 0.8rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .bottom button {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding: 1rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width:262px) and (max-width:768px) {
+    /* My-App */
+    section .app {
+        display: flex;
+        flex-direction: column;
+        width: 94%;
+        margin: auto;
+    }
+
+    .app img {
+        border: 0.75rem white solid;
+        border-radius: 7%;
+        width: 100%;
+    }
+
+    .app h1 {
+        font-size: 3.5rem;
+        font-weight: lighter;
+        order: -1;        
+        margin-bottom: 1rem;
+    }
+
+    .app p {
+        margin-top: 1rem;
+        margin-bottom: 1.8rem;
+        font-size: 0.9rem;
+    }
+
+    .app button {
+        border-radius: 0.6rem;
+        width: 50%;
+        font-size: 0.9rem;
+    }    
+
+    /* My-List */
+    .app-list {
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        margin: auto;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1.5rem;
+        list-style: none;
+    }
+
+    .card-image {
+        padding: 0.4rem;
+    }
+
+    .app-list img {   
+        width: 4rem;
+    }
+
+    .card-content {
+        background-color: #361330;
+        line-height: 1.1rem;
+        padding: 0.1rem;
+    }
+
+    .card-content p {
+        text-align: left;
+        margin: 0.5rem 0.3rem 0rem 0.8rem;   
+        font-size: 0.9rem;
+    }
+
+    .card-content .person-title {
+        font-weight: 900;
+        margin-top: 0.7rem;
+    }
+
+    .card-content .person-date {
+        text-align: right;
+        margin-right: 0.8rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .bottom button {
+        width: 50%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding: 1rem 1.2rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1164px) {
+    /* My-App */
+    section .app {
+        width: 70%;
+        margin: auto;
+    }
+
+    .app h1 {
+        font-size: 3.9rem;
+        font-weight: lighter;
+        order: -1;        
+        margin-bottom: 0.1rem;
+        margin-left: 0.6rem;
+    }
+
+    .app p {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    .app button {
+        border-radius: 0.6rem;
+        width: 60%;
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+    }   
+
+    /* My-List */
+    .bottom button {
+        width: 20%;
+        padding: 1rem 1.2rem;
+    }
+}
+
+@media only screen and (min-width:1164px) {
+    /* My-App */
+    .app button {
+        width: 50%;
+        font-size: 0.9rem;
+    }    
+}
